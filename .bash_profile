@@ -52,7 +52,7 @@ cd() { builtin cd "$@"; ll; }               # Always list directory contents upo
 #   ---------------------------
 
 alias qfind="find . -name "                 # qfind:    Quickly search for file in current dir and below
-alias efind="find / -name "                 # efind:    Search for file in entire filesystem
+alias efind="sudo find / -name "            # efind:    Search for file in entire filesystem
 ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
 
 
