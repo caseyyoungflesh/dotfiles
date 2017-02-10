@@ -51,7 +51,8 @@ cd() { builtin cd "$@"; ll; }               # Always list directory contents upo
 #   3. SEARCHING
 #   ---------------------------
 
-alias qfind="find . -name "                 # qfind:    Quickly search for file
+alias qfind="find . -name "                 # qfind:    Quickly search for file in current dir and below
+alias efind="find / -name "                 # efind:    Search for file in entire filesystem
 ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
 
 
@@ -99,3 +100,8 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #   ---------------------------------------
 #   6. REMINDERS & NOTES
 #   ---------------------------------------
+
+
+#To find files: Try find ~/ -type f -name "postgis-2.0.0" instead.
+
+#Using . will only search the current directory. ~/ will search your entire home directory (likely where you downloaded it to). If you used wget as root, its possible it could be somewhere else so you could use / to search the whole filesystem
