@@ -1,6 +1,6 @@
 #ignore everything
 *
-README.Md
+README.md
 
 #except
 !.gitignore
