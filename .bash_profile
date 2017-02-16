@@ -102,6 +102,9 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #   ---------------------------------------
 
 
-#To find files: Try find ~/ -type f -name "postgis-2.0.0" instead.
+#To find files: find ~/ -name "postgis-2.0.0"
 
 #Using . will only search the current directory. ~/ will search your entire home directory (likely where you downloaded it to). If you used wget as root, its possible it could be somewhere else so you could use / to search the whole filesystem
+
+#To hide .zip file in a .gif: cat somefile.zip >> somefile.gif
+#To open, unzip the .gif file
