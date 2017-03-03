@@ -33,7 +33,8 @@
 #   -----------------------------
 
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
-alias tw='open -a TextWrangler'             # tw:           Opens file in text wrangler
+#alias tw='open -a TextWrangler'             # tw:           Opens file in text wrangler
+alias bb='open -a BBEdit'                   # bb:           Opens file in BBEdit
 alias ll='ls -FGlAhp'                       # ll:           Preferred 'ls' implementation
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias which='type -all'                     # which:        Find executables
@@ -108,3 +109,6 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 
 #To hide .zip file in a .gif: cat somefile.zip >> somefile.gif
 #To open, unzip the .gif file
+
+#To install ruby gems, use: sudo gem install GEMNAME -n /usr/local/bin
+#as noted here: https://github.com/bundler/bundler/issues/4065
