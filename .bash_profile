@@ -38,14 +38,15 @@ alias bb='open -a BBEdit'                   # bb:           Opens file in BBEdit
 alias ll='ls -FGlAhp'                       # ll:           Preferred 'ls' implementation
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias which='type -all'                     # which:        Find executables
+alias so='source ~/.bash_profile'           # so:           reloads bash profile
 alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
+cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
-cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
 
 
 #   ---------------------------
@@ -112,3 +113,4 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 
 #To install ruby gems, use: sudo gem install GEMNAME -n /usr/local/bin
 #as noted here: https://github.com/bundler/bundler/issues/4065
+
