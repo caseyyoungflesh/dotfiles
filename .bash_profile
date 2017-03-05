@@ -115,3 +115,6 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #To install ruby gems, use: sudo gem install GEMNAME -n /usr/local/bin
 #as noted here: https://github.com/bundler/bundler/issues/4065
 
+#can use pbcopy on macOS to copy things to clipboard
+#for instance pwd | pbcopy
+#or pbcopy < bla.txt
