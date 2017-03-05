@@ -35,6 +35,7 @@
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
 #alias tw='open -a TextWrangler'             # tw:           Opens file in text wrangler
 alias bb='open -a BBEdit'                   # bb:           Opens file in BBEdit
+alias np='start notepad++'                   # bb:           Opens file in BBEdit
 alias ll='ls -FGlAhp'                       # ll:           Preferred 'ls' implementation
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias which='type -all'                     # which:        Find executables
