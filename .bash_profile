@@ -8,11 +8,6 @@
 #  ---------------------------------------------------------------------------
 
 
-
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-
-
 #   ---------------------------------------
 #   Load the shell dotfiles
 #   ------------------------------------------------------------
@@ -24,9 +19,9 @@ export PATH="$HOME/bin:$PATH";
 # * ~/.functions can be used to set functions (similar to aliases but can take arguments)
 # * ~/.extra can be used for other settings you don’t want to commit
 
-
-for file in ~/.{path, bash_prompt, exports, aliases, functions, extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-
+source ~/.path
+source ~/.bash_prompt
+source ~/.exports
+source ~/.aliases
+source ~/.functions
+source ~/.extra
