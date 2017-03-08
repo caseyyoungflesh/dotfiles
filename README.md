@@ -7,3 +7,9 @@ Collection of dotfiles
  * `~/.aliases` can be used to set aliases
  * `~/.functions` can be used to set functions (similar to aliases but can take arguments)
  * `~/.extra` can be used for other settings you don’t want to commit (not in repo)
+
+
+Sourced mainly from:  
+https://natelandau.com/my-mac-osx-bash_profile/  
+and  
+https://github.com/mathiasbynens/dotfiles
