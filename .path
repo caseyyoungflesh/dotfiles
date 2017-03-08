@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-#   ------------------------------------------------------------
-#   Set Path
-#   ------------------------------------------------------------
-
-	#gnubin coreutils by default
-	
-    export PATH="/opt/local/libexec/gnubin/:/opt/local/bin:/opt/local/sbin:$PATH"
