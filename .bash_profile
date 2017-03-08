@@ -1,7 +1,8 @@
 #  ---------------------------------------------------------------------------
 #
 #  Description:  Bash profile - loads other dotfiles
-#  Subset mainly from: https://natelandau.com/my-mac-osx-bash_profile/
+#  Subset mainly from: 
+#  https://natelandau.com/my-mac-osx-bash_profile/
 #  and
 #  https://github.com/mathiasbynens/dotfiles
 #
