@@ -4,4 +4,6 @@
 #   Set Path
 #   ------------------------------------------------------------
 
-    export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+	#gnubin coreutils by default
+	
+    export PATH="/opt/local/libexec/gnubin/:/opt/local/bin:/opt/local/sbin:$PATH"
