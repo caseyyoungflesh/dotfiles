@@ -1,6 +1,6 @@
 # dotfiles
 
-dotfiles loaded on login:
+dotfiles for bash shell loaded on login:
 
  * `~/.bash_profile` used to source other dotfiles
  * `~/.bash_prompt` used to change shell prompt
