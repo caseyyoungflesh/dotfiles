@@ -8,6 +8,7 @@ Collection of dotfiles
  * `~/.aliases` can be used to set aliases
  * `~/.functions` can be used to set functions (similar to aliases but can take arguments)
 
+ * '~/.macos' can be used to setup macOS defaults (run using `source ~/.macOS`)
 
 
 Sourced mainly from:  
