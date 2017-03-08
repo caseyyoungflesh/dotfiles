@@ -1,2 +1,2 @@
-# dot_files
+# dotfiles
 Collection of dotfiles
