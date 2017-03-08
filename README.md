@@ -1,17 +1,22 @@
 # dotfiles
 Collection of dotfiles
 
- * `~/.path` can be used to extend `$PATH` (not in repo)
- * `~/.extra` can be used for other settings you don’t want to commit (not in repo)
- * `~/.bash_prompt` can be used to change prompt
- * `~/.exports` can be used to set environment variables
- * `~/.aliases` can be used to set aliases
- * `~/.functions` can be used to set functions (similar to aliases but can take arguments)
+Loaded on login:
 
- * '~/.macos' can be used to setup macOS defaults (run using `source ~/.macOS`)
+ * `~/.bash_profile` used to source other dotfiles
+ * `~/.bash_prompt` used to change shell prompt
+ * `~/.exports` used to set environment variables
+ * `~/.aliases` used to set aliases for shell commands
+ * `~/.functions` used to set functions (similar to aliases but can take arguments)
+ * `~/.path` used to extend `$PATH` (on local machine but not in repo)
+ * `~/.extra` used for other settings you don’t want to commit, such as git global config credentials (on local machine but not in repo)
+
+When setting up a new machine:
+
+ * `~/.macos` used to setup preferred macOS defaults (run using `source ~/.macOS`)
 
 
-Sourced mainly from:  
+Largely cobbled together from:  
 https://natelandau.com/my-mac-osx-bash_profile/  
 and  
 https://github.com/mathiasbynens/dotfiles
