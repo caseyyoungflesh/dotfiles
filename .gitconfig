@@ -13,19 +13,16 @@
     unstage = reset HEAD --
 
     # Start a new local repository and perform initial commit
-    this = !git init && git add . && git commmit -m \"Initial commit.\"
+    this = !git init && git add . && git commit -m \"Initial commit\"
 
     co = checkout
     
     ci = commit
     
     rao = remote add origin
-    
+
     # View the current working tree status using the short format
     s = status --short --branch
-
-    # Pull in remote changes for the current repository
-    p = pull origin master
 
     # Commit all changes
     ca = !git add -A && git commit
