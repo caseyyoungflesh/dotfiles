@@ -29,9 +29,9 @@ alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias scp='scp -v'                          # Preferred 'scp' implementation
 alias sz='du -csh * | sort -h'              # Determine size of all files in dir and order by size
-gdir () {                                   # Find file using gfind and cd to that directory
- pa=mdfind -onlyin ~/Google\ Drive/ -name $1 | head -1
- cd "$(dirname "$pa")"
+                                            # Find file using gfind and cd to that directory
+gdir () {                                   
+ cd "$(dirname "$(mdfind -onlyin ~/Google\ Drive/ -name $1 | head -1)")"
  }
 
 
