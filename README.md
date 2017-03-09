@@ -13,7 +13,7 @@ dotfiles for bash shell loaded on login:
 For git:
 
  * `~/.gitconfig` used to configure git options
- * `~/.gitignore_global` used to set files to ignore globally
+ * `~/.gitignore_global` used to specify files to ignore globally
 
 When setting up a new machine:
 
