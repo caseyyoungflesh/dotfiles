@@ -10,3 +10,5 @@
 !.aliases
 !.exports
 !.bash_prompt
+!.gitconfig
+!.gitignore_global
