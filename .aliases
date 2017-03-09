@@ -32,13 +32,7 @@ alias sz='du -csh * | sort -h'              # Determine size of all files in dir
 gdir () {                                   # Find file using gfind and cd to that directory
  cd "$(dirname "$(mdfind -onlyin ~/Google\ Drive/ -name $1 | head -1)")"
  }
-#lazygit() {
-#    git add -A
-#    git commit -m "$1"
-#    git push
-#}
 
-#git add -A && git commit -m 'SAVEPOINT' && git push
 
 #   ---------------------------
 #   2. SEARCHING
