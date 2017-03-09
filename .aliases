@@ -5,17 +5,17 @@
 #   Load aliases
 #   ------------------------------------------------------------
 
-#  Subset from: https://natelandau.com/my-mac-osx-bash_profile/
+#  Largely from: https://natelandau.com/my-mac-osx-bash_profile/
 
 #   -----------------------------
 #   1. MAKE TERMINAL BETTER
 #   -----------------------------
 
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
-#alias tw='open -a TextWrangler'             # tw:           Opens file in text wrangler
+#alias tw='open -a TextWrangler'            # tw:           Opens file in text wrangler
 alias bb='open -a BBEdit'                   # bb:           Opens file in BBEdit
-alias np='start notepad++'                   # bb:           Opens file in BBEdit
-alias ll='ls -FGlAhp --color=auto'                       # ll:           Preferred 'ls' implementation
+alias np='start notepad++'                  # bb:           Opens file in BBEdit
+alias ll='ls -FGlAhp --color=auto'          # ll:           Preferred 'ls' implementation
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias which='type -all'                     # which:        Find executables
 alias so='source ~/.bash_profile'           # so:           reloads bash profile
@@ -28,30 +28,34 @@ alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias scp='scp -v'                          # Preferred 'scp' implementation
-alias sz='du -csh * | sort -h'
+alias sz='du -csh * | sort -h'              # Determine size of all files in dir and order by size
+gdir () {                                   # Find file using gfind and cd to that directory
+ pa=mdfind -onlyin ~/Google\ Drive/ -name $1 | head -1
+ cd "$(dirname "$pa")"
+ }
+
 
 
 #   ---------------------------
 #   2. SEARCHING
 #   ---------------------------
 
-alias qfind="find . -name "                 # qfind:    Quickly search for file in current dir and below
-alias efind="sudo find / -name "            # efind:    Search for file in entire filesystem
-ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
-
+alias qfind="find . -name "                             # qfind:    Quickly search for file in current dir and below
+alias gfind="mdfind -onlyin ~/Google\ Drive/ -name "    # gfind:    Search Google Drive 
+ff () { /usr/bin/find . -name "$@" ; }                  # ff: Find file under the current directory
 
 #   ---------------------------
 #   3. NETWORKING
 #   ---------------------------
 
 alias myip='curl ifconfig.co ifconfig.co/city ifconfig.co/country'     # myip:         Public facing IP Address
-alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
-alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
-alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
-alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
-alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
-alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
-alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
+alias netCons='lsof -i'                                                # netCons:      Show all open TCP/IP sockets
+alias flushDNS='dscacheutil -flushcache'                               # flushDNS:     Flush out the DNS Cache
+alias lsock='sudo /usr/sbin/lsof -i -P'                                # lsock:        Display open sockets
+alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'                      # lsockU:       Display only open UDP sockets
+alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'                      # lsockT:       Display only open TCP sockets
+alias openPorts='sudo lsof -i | grep LISTEN'                           # openPorts:    All listening connections
+alias showBlocked='sudo ipfw list'                                     # showBlocked:  All ipfw rules inc/ blocked IPs
 
 #   ii:  display useful host related informaton
 #   -------------------------------------------------------------------
