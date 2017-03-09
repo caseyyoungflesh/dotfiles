@@ -32,6 +32,10 @@
     
     # Commit and push all changes with message 'savepoint'
     save = !git add -A && git commit -m 'SAVEPOINT' && git push
+    
+    # Commit and push all changes with message 'savepoint'
+    # function in .aliases
+    tsave = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
 
     # Switch to a branch, creating it if necessary
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
