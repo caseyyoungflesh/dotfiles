@@ -8,7 +8,12 @@ dotfiles for bash shell loaded on login:
  * `~/.aliases` used to set aliases for shell commands
  * `~/.functions` used to set functions (similar to aliases but can take arguments)
  * `~/.path` used to extend `$PATH` (**on local machine but not in repo**)
- * `~/.extra` used for other settings you don’t want to commit, such as git global config credentials (**on local machine but not in repo**)
+ * `~/.extra` used for other settings you don’t want to commit, such as git user login (**on local machine but not in repo**)
+ 
+for git:
+
+ * `~/.gitconfig` used to configure git options
+ * `~/.gitignore_global` used to set files to ignore globally
 
 When setting up a new machine:
 
