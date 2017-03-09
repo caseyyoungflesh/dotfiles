@@ -41,8 +41,8 @@ gdir () {                                   # Find file using gfind and cd to th
 #   ---------------------------
 
 alias qfind="find . -name "                             # qfind:    Quickly search for file in current dir and below
-alias gfind="mdfind -onlyin ~/Google\ Drive/ -name "    # gfind:    Search Google Drive 
-ff () { /usr/bin/find . -name "$@" ; }                  # ff: Find file under the current directory
+alias gfind="mdfind -onlyin ~/Google\ Drive/ -name "    # gfind:    Search Google Drive using name
+alias afind="mdfind -onlyin ~/Google\ Drive/ -live "    # afind:    Search Good Drive for contents, not just name
 
 #   ---------------------------
 #   3. NETWORKING
