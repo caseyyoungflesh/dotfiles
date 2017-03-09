@@ -12,10 +12,6 @@
     # Unstage changes from the index
     unstage = reset HEAD --
 
-    # Show all of my configured aliases
-    #doesn't work
-    #aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \t => \\2/' | sort
-
     # Start a new local repository and perform initial commit
     this = !git init && git add . && git commmit -m \"Initial commit.\"
 
@@ -25,21 +21,14 @@
     
     rao = remote add origin
     
-    # View abbreviated SHA, description, and history graph of the latest 20 commits
-    #Doesn't work
-    #l = log --pretty=oneline -n 20 --graph --abbrev-commit
-    
     # View the current working tree status using the short format
-    s = status -s
+    s = status --short --branch
 
-    # Show the diff between the latest commit and the current state
-    d = !git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat
-
-    # Pull in remote changes for the current repository and all its submodules
-    p = !"git pull; git submodule foreach git pull origin master"
+    # Pull in remote changes for the current repository
+    p = pull origin master
 
     # Commit all changes
-    ca = git add -A && git commit -av
+    ca = !git add -A && git commit
 
     # Switch to a branch, creating it if necessary
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
