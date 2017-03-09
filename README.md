@@ -8,7 +8,7 @@ dotfiles for bash shell loaded on login:
  * `~/.aliases` used to set aliases for shell commands
  * `~/.functions` used to set functions (similar to aliases but can take arguments)
  * `~/.path` used to extend `$PATH` (**on local machine but not in repo**)
- * `~/.extra` used for other settings you don’t want to commit, such as git user login (**on local machine but not in repo**)
+ * `~/.extra` used for other settings you don’t want to commit, such as git user info (**on local machine but not in repo**)
  
 For git:
 
