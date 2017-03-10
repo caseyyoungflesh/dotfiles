@@ -32,7 +32,9 @@ alias sz='du -csh * | sort -h'              # Determine size of all files in dir
 gdir () {                                   # Find file using gfind and cd to that directory
  cd "$(dirname "$(mdfind -onlyin ~/Google\ Drive/ -name $1 | head -1)")"
  }
-
+mdpdf () {                                  # Pandoc
+ pandoc --template=default.tex $1 --latex-engine=xelatex -o $2 -V geometry:margin=1in
+}
 
 #   ---------------------------
 #   2. SEARCHING
