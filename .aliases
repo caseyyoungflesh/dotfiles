@@ -6,6 +6,8 @@
 #   ------------------------------------------------------------
 
 #  Largely from: https://natelandau.com/my-mac-osx-bash_profile/
+#  and
+#  https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
 
 #   -----------------------------
 #   1. MAKE TERMINAL BETTER
@@ -14,7 +16,7 @@
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
 #alias tw='open -a TextWrangler'            # tw:           Opens file in text wrangler
 alias bb='open -a BBEdit'                   # bb:           Opens file in BBEdit
-alias np='start notepad++'                  # bb:           Opens file in BBEdit
+alias np='start notepad++'                  # np:           Opens file in notepad++
 alias ll='ls -FGlAhp --color=auto'          # ll:           Preferred 'ls' implementation
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias which='type -all'                     # which:        Find executables
@@ -75,9 +77,7 @@ alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'                      # lsockT:
 alias openPorts='sudo lsof -i | grep LISTEN'                           # openPorts:    All listening connections
 alias showBlocked='sudo ipfw list'                                     # showBlocked:  All ipfw rules inc/ blocked IP
 
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
 
 #   ii:  display useful host related informaton
 #   -------------------------------------------------------------------
