@@ -39,6 +39,7 @@ mdpdf () {                                  # Pandoc
 }
 alias sudo='sudo '                          # Enable aliases to be sudo’ed
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date' #stopwatch
+alias firefox='open /Applications/Firefox.app'   #open firefox
 
 # Empty the Trash on all mounted volumes and the main HDD.
 # Also, clear Apple’s System Logs to improve shell startup speed.
