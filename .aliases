@@ -35,6 +35,20 @@ gdir () {                                   # Find file using gfind and cd to th
 mdpdf () {                                  # Pandoc
  pandoc --template=default.tex $1 --latex-engine=xelatex -o $2 -V geometry:margin=1in
 }
+alias sudo='sudo '                          # Enable aliases to be sudo’ed
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date' #stopwatch
+
+# Empty the Trash on all mounted volumes and the main HDD.
+# Also, clear Apple’s System Logs to improve shell startup speed.
+# Finally, clear download history from quarantine. https://mths.be/bum
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+
+
+
 
 #   ---------------------------
 #   2. SEARCHING
@@ -43,6 +57,10 @@ mdpdf () {                                  # Pandoc
 alias qfind="find . -name "                             # qfind:    Quickly search for file in current dir and below
 alias gfind="mdfind -onlyin ~/Google\ Drive/ -name "    # gfind:    Search Google Drive using name
 alias afind="mdfind -onlyin ~/Google\ Drive/ -live "    # afind:    Search Good Drive for contents, not just name
+
+
+
+
 
 #   ---------------------------
 #   3. NETWORKING
@@ -55,7 +73,11 @@ alias lsock='sudo /usr/sbin/lsof -i -P'                                # lsock: 
 alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'                      # lsockU:       Display only open UDP sockets
 alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'                      # lsockT:       Display only open TCP sockets
 alias openPorts='sudo lsof -i | grep LISTEN'                           # openPorts:    All listening connections
-alias showBlocked='sudo ipfw list'                                     # showBlocked:  All ipfw rules inc/ blocked IPs
+alias showBlocked='sudo ipfw list'                                     # showBlocked:  All ipfw rules inc/ blocked IP
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 #   ii:  display useful host related informaton
 #   -------------------------------------------------------------------
