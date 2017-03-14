@@ -49,7 +49,8 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-
+#find git directories
+alias gl='find ./ -name .git'
 
 
 
@@ -57,9 +58,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 #   2. SEARCHING
 #   ---------------------------
 
-alias qfind="find . -name "                             # qfind:    Quickly search for file in current dir and below
 alias gfind="mdfind -onlyin ~/Google\ Drive/ -name "    # gfind:    Search Google Drive using name
-alias afind="mdfind -onlyin ~/Google\ Drive/ -live "    # afind:    Search Good Drive for contents, not just name
+alias cfind="mdfind -onlyin ~/Google\ Drive/ -live "    # cfind:    Search Good Drive for contents, not just name
+alias afind="sudo mdfind -onlyin ~ -live -name"         # afind:    Search all using name
 
 
 
