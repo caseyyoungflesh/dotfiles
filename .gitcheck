@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+## gitcheck:
+##   Check all git repositories in subdirectories, and list the ones with changes
+##   30/07/2011, AstroFloyd, bzrcheck
+##   18/01/2013, Astrofloyd, gitcheck
+
+# Initialise counters:
+let count_all=0
+let count_changed=0
+let count_unchanged=0
+
+# Set to 1 for more verbose output:
+let verbose=0
+
+# Find git repos and loop over them:
+for repo in `find ~/ -not \( -path ~/Library -prune \) -type d -name ".git"`
+do
+    let count_all=${count_all}+1
+    
+    # cd to the dir that contains .git/:
+#    dir=`echo ${repo} | sed -e 's/\/.git/\//'`
+#    cd ${dir}
+    
+     dir="$(dirname "$repo")"
+     builtin cd "${dir}"
+
+#    git rev-list HEAD...origin/master --count &> /dev/null || {
+
+    temp=$(git rev-list HEAD...origin/master --count)
+    temp2=$(git status -s | wc -l)
+	blue=$(tput setaf 33)
+
+# if repository is ahead of github (needs push) or has changes, display repo and any files that need to be added
+    if [ $temp -ne 0 ] || [ $temp2 -ne 0 ]; then
+     echo -e "\n\n \E[${blue} ${dir}\E[0m"
+#    git branch -vvra
+     git status --short --branch
+     let count_changed=${count_changed}+1
+    fi
+    
+    # If verbose, print info in the case of no changes:
+    git status -s | grep -v '??' &> /dev/null || {
+	if [ ${verbose} -ne 0 ]; then echo "Nothing to do for ${dir}"; fi
+	let count_unchanged=${count_unchanged}+1
+    }
+    
+    # cd back:
+    builtin cd - &> /dev/null
+done
+
+# Report status and exit:
+echo -ne "\n\n${count_all} git repositories found: "
+echo -ne "${count_changed} have changes, "
+echo -ne "${count_unchanged} are unchanged.\n\n"
