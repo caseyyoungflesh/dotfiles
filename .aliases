@@ -50,9 +50,10 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 #find all git repos
-#alias gl='find ~/ -name ".git" -not -path "*/Library/*"'
 alias gl='find ~/ -not \( -path ~/Library -prune \) -name \.git'
 
+#show all repos with changes or repos that need to be pushed to github
+alias check='source ~/.gitcheck'
 
 #   ---------------------------
 #   2. SEARCHING
