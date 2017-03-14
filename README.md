@@ -13,7 +13,7 @@ For git:
 
  * `~/.gitconfig` used to configure git options
  * `~/.gitignore_global` used to specify files to ignore globally
- * `~/.gitcheck` script used to check which repos have changes or need to be pushed to remote - aliased as `check`
+ * `~/.gitcheck` script used to check which repos have changes and/or need to be pushed to or pulled from remote - aliased as `check`
 
 When setting up a new machine:
 
