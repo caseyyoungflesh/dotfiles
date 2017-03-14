@@ -32,7 +32,7 @@ alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias scp='scp -v'                          # Preferred 'scp' implementation
 alias sz='du -csh * | sort -h'              # Determine size of all files in dir and order by size
 gdir () {                                   # Find file using gfind and cd to that directory
- cd "$(dirname "$(mdfind -onlyin ~/Google\ Drive/ -name $1 | head -1)")"
+ cd "$(dirname "$(mdfind -onlyin ~/Google_Drive/ -name $1 | head -1)")"
  }
 mdpdf () {                                  # Pandoc
  pandoc --template=default.tex $1 --latex-engine=xelatex -o $2 -V geometry:margin=1in
@@ -49,8 +49,8 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-#find git directories
-alias gl='find ./ -name .git'
+#find all git repos
+alias gl='find ~/ -name .git'
 
 
 
@@ -58,8 +58,8 @@ alias gl='find ./ -name .git'
 #   2. SEARCHING
 #   ---------------------------
 
-alias gfind="mdfind -onlyin ~/Google\ Drive/ -name "    # gfind:    Search Google Drive using name
-alias cfind="mdfind -onlyin ~/Google\ Drive/ -live "    # cfind:    Search Good Drive for contents, not just name
+alias gfind="mdfind -onlyin ~/Google_Drive/ -name "    # gfind:    Search Google Drive using name
+alias cfind="mdfind -onlyin ~/Google_Drive/ -live "    # cfind:    Search Google Drive for contents, not just name
 alias afind="sudo mdfind -onlyin ~ -live -name"         # afind:    Search all using name
 
 
