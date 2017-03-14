@@ -42,6 +42,6 @@ Thumbs.db
 # R #
 #####
 
-.Rproj
+*.Rproj
 .RData
 *.jags
