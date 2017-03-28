@@ -14,6 +14,7 @@ For git:
  * `~/.gitconfig` used to configure git options
  * `~/.gitignore_global` used to specify files to ignore globally
  * `~/.gitcheck` script used to check which repos on local machine have changes and/or need to be pushed to or pulled from remote - aliased as `check`
+ * `~/.gitpullall` script used to pull all repos on local machine that are behind remote - aliased as `gpull`
 
 When setting up a new machine:
 
