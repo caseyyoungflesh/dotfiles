@@ -55,7 +55,8 @@ alias gl='find ~/ -not \( -path ~/Library -prune \) -name \.git'
 #show all repos on local with changes or repos that need to be pushed to or pulled from github
 alias check='source ~/.gitcheck'
 
-
+#pull all repos that are behind github
+alias gpull='source ~/.gitpullall'
 
 
 

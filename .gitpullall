@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+## gitpullall
+## pulls from remote all repos that are behind github
+
+for repo in `find ~/ -not \( -path ~/Library -prune \) -type d -name ".git"`
+do
+    
+    dir="$(dirname "$repo")"
+    builtin cd "${dir}"
+	git fetch origin &> /dev/null
+
+# how far ahead of local is github
+    temp3=$(git log HEAD..origin/master --oneline | wc -l)
+# set blue to display repo location below
+	blue=$(tput setaf 33)
+
+
+# if repository is behind github (needs pull), display repo and how far behind
+    if [ $temp3 -ne 0 ]; then
+     echo -e "\n\n \E[${blue} ${dir}\E[0m"
+     git status --short --branch
+     git pull
+    fi
+    
+    # cd back:
+    builtin cd - &> /dev/null
+done
