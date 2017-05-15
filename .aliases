@@ -59,6 +59,8 @@ alias check='source ~/.gitcheck'
 alias gpull='source ~/.gitpullall'
 
 
+#sort by date modified
+#ls -ltr
 
 
 #   ---------------------------
