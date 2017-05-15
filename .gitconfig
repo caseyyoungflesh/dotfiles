@@ -10,11 +10,14 @@
 	autocrlf = input
 
 [alias]
-    # list aliases
+    # List aliases
     la = "!git config -l | grep alias | cut -c 7-"
     
     # Unstage changes from the index
     unstage = reset HEAD --
+
+    # Stop tracking files - file name goes after '--cached'
+    untrack = rm -r --cached
 
     #checkout new branch
     cob = checkout -b
