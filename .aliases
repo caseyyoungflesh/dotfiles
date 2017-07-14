@@ -58,6 +58,8 @@ alias check='source ~/.gitcheck'
 #pull all repos that are behind github
 alias gpull='source ~/.gitpullall'
 
+#login to seawulf
+alias seawulf='ssh -X cyoungflesh@login.seawulf.stonybrook.edu'
 
 #sort by date modified
 #ls -ltr
