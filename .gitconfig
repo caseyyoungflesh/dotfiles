@@ -4,7 +4,7 @@
 	helper = osxkeychain
 	
 [core]
-	editor = emacs
+	editor = vim
 	# Use custom `.gitignore`
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
