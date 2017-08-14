@@ -65,6 +65,8 @@ alias seawulf='ssh -X cyoungflesh@login.seawulf.stonybrook.edu'
 #ls -ltr
 
 
+alias bcourse='cd /Users/caseyyoungflesh/Google_Drive/Research/Conferences_and_workshops/SESYNC_Bayes'
+
 #   ---------------------------
 #   2. SEARCHING
 #   ---------------------------
