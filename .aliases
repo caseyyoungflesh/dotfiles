@@ -61,6 +61,12 @@ alias gpull='source ~/.gitpullall'
 #login to seawulf
 alias seawulf='ssh -X cyoungflesh@login.seawulf.stonybrook.edu'
 
+#login to sahara
+alias sahara='ssh -p 2217 casey@sahara.ecoevo.stonybrook.edu'
+
+#login to pleiades
+alias pleiades='ssh cyoungfl@sfe3.nas.nasa.gov'
+
 #sort by date modified
 #ls -ltr
 
