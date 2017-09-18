@@ -2,8 +2,6 @@
 
 ## gitcheck:
 ##   Check all git repositories in subdirectories, and list the ones with changes
-##   30/07/2011, AstroFloyd, bzrcheck
-##   18/01/2013, Astrofloyd, gitcheck
 ##   Modified from: https://astrofloyd.wordpress.com/2013/02/10/gitcheck-check-all-your-git-repositories-for-changes/
 
 # Initialise counters:
@@ -11,14 +9,11 @@ let count_all=0
 let count_changed=0
 let count_unchanged=0
 
-# Set to 1 for more verbose output:
-let verbose=0
 
 # Find git repos and loop over them:
 for repo in `find ~/ -not \( -path ~/Library -prune \) -type d -name ".git"`
 do
     let count_all=${count_all}+1
-    
     
     dir="$(dirname "$repo")"
     builtin cd "${dir}"
@@ -33,20 +28,15 @@ do
 # set blue to display repo location below
 	blue=$(tput setaf 33)
 
-
 # if repository is ahead of/behind github (needs push or pull) or has changes, display repo and any files that need to be added
     if [ $temp -ne 0 ] || [ $temp2 -ne 0 ] || [ $temp3 -ne 0 ]; then
      echo -e "\n\n \E[${blue} ${dir}\E[0m"
 #    git branch -vvra
      git status --short --branch
      let count_changed=${count_changed}+1
+    else
+     let count_unchanged=${count_unchanged}+1
     fi
-    
-    # If verbose, print info in the case of no changes:
-    git status -s | grep -v '??' &> /dev/null || {
-	if [ ${verbose} -ne 0 ]; then echo "Nothing to do for ${dir}"; fi
-	let count_unchanged=${count_unchanged}+1
-    }
     
     # cd back:
     builtin cd - &> /dev/null
