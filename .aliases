@@ -65,8 +65,6 @@ alias seawulf='ssh -X cyoungflesh@login.seawulf.stonybrook.edu'
 #ls -ltr
 
 
-alias bcourse='cd /Users/caseyyoungflesh/Google_Drive/Research/Conferences_and_workshops/SESYNC_Bayes'
-
 #   ---------------------------
 #   2. SEARCHING
 #   ---------------------------
@@ -74,9 +72,6 @@ alias bcourse='cd /Users/caseyyoungflesh/Google_Drive/Research/Conferences_and_w
 alias gfind="mdfind -onlyin ~/Google_Drive/ -name "    # gfind:    Search Google Drive using name
 alias cfind="mdfind -onlyin ~/Google_Drive/ -live "    # cfind:    Search Google Drive for contents, not just name
 alias afind="sudo mdfind -onlyin ~ -live -name"         # afind:    Search all using name
-
-
-
 
 
 #   ---------------------------
@@ -91,7 +86,6 @@ alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'                      # lsockU:
 alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'                      # lsockT:       Display only open TCP sockets
 alias openPorts='sudo lsof -i | grep LISTEN'                           # openPorts:    All listening connections
 alias showBlocked='sudo ipfw list'                                     # showBlocked:  All ipfw rules inc/ blocked IP
-
 
 
 #   ii:  display useful host related informaton
