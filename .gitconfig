@@ -36,11 +36,7 @@
     
     # Commit and push all changes with custom message
     save = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
-    # ... with message 'savepoint'
-    #save = !git add -A && git commit -m 'SAVEPOINT' && git push
     
-    
-
     # Switch to a branch, creating it if necessary
     go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
