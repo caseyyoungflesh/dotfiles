@@ -1,6 +1,6 @@
 # dotfiles
 
-dotfiles for bash shell loaded on login:
+dotfiles for bash shell loaded on login (subset for hpc resources [here](https://github.com/caseyyoungflesh/hpc_dotfiles)):
 
  * `~/.bash_profile` used to source other dotfiles
  * `~/.bash_prompt` used to change shell prompt
