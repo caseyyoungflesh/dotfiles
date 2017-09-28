@@ -77,7 +77,7 @@ alias pleiades='ssh cyoungfl@sfe3.nas.nasa.gov'
 alias gfind="mdfind -onlyin ~/Google_Drive/ -name "    # gfind:    Search Google Drive using name
 alias cfind="mdfind -onlyin ~/Google_Drive/ -live "    # cfind:    Search Google Drive for contents, not just name
 alias afind="sudo mdfind -onlyin ~ -live -name"        # afind:    Search all using name
-ufind () { find / -name $1 2>/dev/null ; }             # ufind:    Search everywhere using UNIX `find`
+ufind () { find / -name $1 2>/dev/null ; }             # ufind:    Search everywhere using UNIX `find` - exact match
 
 #   ---------------------------
 #   3. NETWORKING
