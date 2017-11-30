@@ -1,4 +1,5 @@
 #partially from http://michaelwales.com/articles/make-gitconfig-work-for-you/
+#to revert back to previous commit: git revert --no-commit SHA#..HEAD
 
 [credential]
 	helper = osxkeychain
