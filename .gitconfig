@@ -1,5 +1,4 @@
 #partially from http://michaelwales.com/articles/make-gitconfig-work-for-you/
-#to revert back to previous commit: git revert --no-commit SHA#..HEAD
 
 [credential]
 	helper = osxkeychain
@@ -19,6 +18,9 @@
 
     # Stop tracking files - file name goes after '--cached'
     untrack = rm -r --cached
+
+    # Revert to previous commit (arg is SHA to revert to) - no commit msg necessary
+    rev = "!f() { git revert --no-commit ${1}..HEAD && git commit -m 'revert to '"${1}" && git push; }; f"
 
     #checkout new branch
     cob = checkout -b
