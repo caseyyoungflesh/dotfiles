@@ -128,3 +128,10 @@ export PS1;
 
 PS2="\[${yellow}\]\ => \[${reset}\]";
 export PS2;
+
+
+
+#for SWC git teaching, bash_prompt can be commented out and the following run on the command line:
+#PS1="____________________________________________"; PS1+="\[${bold}\]\n"; PS1+="\h:"; PS1+="\w "; PS1+="\u$ "
+#run 'clear' after resetting prompt
+#creates a prompt identical to the default, except that a horizontal line separate code lines making it easier to read
