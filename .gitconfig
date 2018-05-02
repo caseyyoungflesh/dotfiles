@@ -8,7 +8,6 @@
 	# Use custom `.gitignore`
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
-	filemode = false
 
 [alias]
     # List aliases
