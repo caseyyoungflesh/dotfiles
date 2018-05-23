@@ -18,7 +18,7 @@ For git:
 When setting up a new machine:
 
  * `~/.macos` used to set preferred macOS defaults (run using `source ~/.macOS`)
- * `~/.ubuntu` used to setup ubuntu machine
+ * `~/.ubuntu` used to setup ubuntu machine (run using `source ~/.ubuntu`)
 
 &nbsp;
 
