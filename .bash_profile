@@ -24,4 +24,3 @@ source ~/.path
 source ~/.bash_prompt
 source ~/.exports
 source ~/.aliases
-source ~/.functions
