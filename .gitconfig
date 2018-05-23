@@ -12,7 +12,10 @@
 [alias]
     # List aliases
     la = "!git config -l | grep alias | cut -c 7-"
-    
+
+    # Set upstream command
+    s-u = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+
     # Unstage changes from the index
     unstage = reset HEAD --
 
