@@ -11,7 +11,7 @@ let count_unchanged=0
 
 
 # Find git repos and loop over them:
-for repo in `find ~/ -not \( -path ~/Library -prune \) -type d -name ".git"`
+for repo in `find ~ -not \( -path ~/Library -prune \) -type d -name ".git"`
 do
     let count_all=${count_all}+1
     
@@ -30,7 +30,7 @@ do
 
 # if repository is ahead of/behind github (needs push or pull) or has changes, display repo and any files that need to be added
     if [ $temp -ne 0 ] || [ $temp2 -ne 0 ] || [ $temp3 -ne 0 ]; then
-     echo -e "\n\n \E[${blue} ${dir}\E[0m"
+     echo -e "\n\n [${blue} ${dir}"
 #    git branch -vvra
      git status --short --branch
      let count_changed=${count_changed}+1
