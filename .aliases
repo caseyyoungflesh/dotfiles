@@ -67,8 +67,9 @@ alias sahara='ssh -p 2217 casey@sahara.ecoevo.stonybrook.edu'
 alias pleiades='ssh cyoungfl@sfe3.nas.nasa.gov'
 
 #login to Xanadu - need to use Pulse Secure to login to VPN when outside UConn: http://vpn.uchc.edu/cam
-#need to use ssh user_name@xanadu-submit-int.cam.uchc.edu if using this VPN - could use Storrs VPN nad use ext below
+#need to use 'ssh cyoungflesh@xanadu-submit-int.cam.uchc.edu' if using this VPN
 alias xanadu='ssh cyoungflesh@xanadu-submit-ext.cam.uchc.edu'
+alias xanadu2='ssh cyoungflesh@hpc-submit-ext.cam.uchc.edu'
 
 #sort by date modified
 #ls -ltr

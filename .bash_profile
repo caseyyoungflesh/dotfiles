@@ -24,3 +24,6 @@ source ~/.path
 source ~/.bash_prompt
 source ~/.exports
 source ~/.aliases
+
+#prompt for SWC bash/git workshops
+#PS1="____________________________________________"; PS1+="\[${bold}\]\n"; PS1+="\h:"; PS1+="\w "; PS1+="\u$ "
