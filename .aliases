@@ -67,7 +67,11 @@ alias sahara='ssh -p 2217 casey@sahara.ecoevo.stonybrook.edu'
 alias pleiades='ssh cyoungfl@sfe3.nas.nasa.gov'
 
 alias xanadu='ssh cyoungflesh@xanadu-submit-ext.cam.uchc.edu'
+alias xanadust='ssh astillman@xanadu-submit-ext.cam.uchc.edu'
+alias xanadusp='ssh aspence@xanadu-submit-ext.cam.uchc.edu'
 alias xanadu2='ssh cyoungflesh@old-submit-ext.cam.uchc.edu'
+alias hoffman='ssh cyoungfl@hoffman2.idre.ucla.edu'
+
 
 #sort by date modified
 #ls -ltr
