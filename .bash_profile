@@ -25,6 +25,9 @@ source ~/.bash_prompt
 source ~/.exports
 source ~/.aliases
 
+#silence deprecation warning about bash on Catalina
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+
 #prompt for SWC bash/git workshops
 #PS1="____________________________________________"; PS1+="\[${bold}\]\n"; PS1+="\h:"; PS1+="\w "; PS1+="\u$ "
-
