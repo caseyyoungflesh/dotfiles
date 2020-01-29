@@ -29,6 +29,9 @@ alias sz='du -csh * | sort -h'              # sz:           Determine size of al
 alias sudo='sudo '                          # sudo:          Enable aliases to be sudo’ed
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date' #stopwatch
 alias firefox='open /Applications/Firefox.app'   #open firefox
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
 
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash

@@ -31,3 +31,5 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 #prompt for SWC bash/git workshops
 #PS1="____________________________________________"; PS1+="\[${bold}\]\n"; PS1+="\h:"; PS1+="\w "; PS1+="\u$ "
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
