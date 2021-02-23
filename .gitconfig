@@ -81,3 +81,5 @@
 [user]
 	name = Casey Youngflesh
 	email = caseyyoungflesh@gmail.com
+[init]
+	defaultBranch = main
