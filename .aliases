@@ -62,6 +62,7 @@ alias gpull='source ~/.gitpullall'
 
 #login to seawulf
 alias seawulf='ssh -X cyoungflesh@login.seawulf.stonybrook.edu'
+alias milan='ssh -X cyoungflesh@milan.seawulf.stonybrook.edu'
 
 #login to sahara
 alias sahara='ssh -p 2217 casey@sahara.ecoevo.stonybrook.edu'
@@ -74,6 +75,8 @@ alias xanadust='ssh astillman@xanadu-submit-ext.cam.uchc.edu'
 alias xanadusp='ssh aspence@xanadu-submit-ext.cam.uchc.edu'
 alias xanadu2='ssh cyoungflesh@old-submit-ext.cam.uchc.edu'
 alias hoffman='ssh cyoungfl@hoffman2.idre.ucla.edu'
+alias aws_gpu='ssh -i "/Users/caseyyoungflesh/.aws/aws_key_pem_us-east-2.pem" ubuntu@ec2-13-59-242-55.us-east-2.compute.amazonaws.com'
+alias icer='ssh -XY ccy@hpcc.msu.edu'
 
 
 #sort by date modified
@@ -116,4 +119,5 @@ alias showBlocked='sudo ipfw list'                                     # showBlo
         #echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
         echo
     }
+
     
