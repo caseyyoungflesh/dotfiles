@@ -77,6 +77,7 @@ alias xanadu2='ssh cyoungflesh@old-submit-ext.cam.uchc.edu'
 alias hoffman='ssh cyoungfl@hoffman2.idre.ucla.edu'
 alias aws_gpu='ssh -i "/Users/caseyyoungflesh/.aws/aws_key_pem_us-east-2.pem" ubuntu@ec2-13-59-242-55.us-east-2.compute.amazonaws.com'
 alias icer='ssh -XY ccy@hpcc.msu.edu'
+alias palm='ssh cyoungf@slogin.palmetto.clemson.edu'
 
 
 #sort by date modified
